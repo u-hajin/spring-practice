@@ -9,8 +9,14 @@ import org.springframework.stereotype.Controller;
 public class MemberController {
     private final MemberService memberService;
 
-    @Autowired // spring이 컨테이너에 있는 memberService를 가져다 연결해준다.
+    @Autowired // spring이 컨테이너에 있는 memberService를 가져다 연결해준다. 생성자 주입
     public MemberController(MemberService memberService) {
         this.memberService = memberService;
     }
+
+//    @Autowired // setter 주입, public 노출 문제 발생
+//    public void setMemberService(MemberService memberService) {
+//        this.memberService = memberService;
+//    }
+    
 }

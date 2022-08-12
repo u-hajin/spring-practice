@@ -9,12 +9,10 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 import java.util.Optional;
 
-@Service
 public class MemberService {
     private final MemberRepository memberRepository;
 
     // 외부에서 memberRepository 생성 후 넣어줌 -> Dependency Injection
-    @Autowired
     public MemberService(MemberRepository memberRepository) {
         this.memberRepository = memberRepository;
     }
