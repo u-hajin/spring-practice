@@ -19,6 +19,7 @@ public class SpringConfig {
 //        this.em = em;
 //    }
 
+    @Autowired
     public SpringConfig(MemberRepository memberRepository) {
         this.memberRepository = memberRepository;
     }
